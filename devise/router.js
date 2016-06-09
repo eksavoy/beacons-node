@@ -4,7 +4,7 @@ var router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
 var db;
 
-MongoClient.connect('mongodb://localhost:27017/Beacons', (err, database) => {
+MongoClient.connect('mongodb://10.134.15.103:27017/Beacons', (err, database) => {
   db = database;
   if(err){
     console.log(err);
