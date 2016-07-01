@@ -3,7 +3,6 @@ const bodyParser= require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 
 var devises = require('./devise/router.js');
-var beacons = require('./beacon/router.js');
 
 var app = express();
 var db;
@@ -32,7 +31,6 @@ MongoClient.connect('mongodb://10.134.15.103:27017/Beacons', (err, database) => 
 
 
 app.use('/devises', devises);
-//app.use('/beacons', beacons);
 
 app.get('/', function(req, res){
   res.redirect('/static/index.html');
