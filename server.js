@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 const PORT=4000
 
-MongoClient.connect('mongodb://10.134.15.103:27017/Beacons', (err, database) => {
+MongoClient.connect('mongodb://10.134.15.103:27017/Beacons', function(err, database){
   if(err){
       console.log(err);
       process.exit();
